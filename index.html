@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eritrean & Ethiopian Cuisine — Calgary Downtown</title>
+
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="logo">
+    <div class="logo-mark">🍲</div>
+    <div class="logo-text">
+      <span class="logo-main">Eritrean & Ethiopian</span>
+      <span class="logo-sub">Cuisine · Calgary</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="order.html" class="nav-cta">Order Now</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">🇪🇷 🇪🇹 &nbsp; Authentic East African Cuisine</div>
+    <h1>A Taste of<br><em>Eritrea & Ethiopia</em><span>In the Heart of Calgary</span></h1>
+    <p class="hero-sub">Slow-cooked stews, freshly made injera, and centuries of culinary tradition — brought to your table at 208 Stephen Avenue SW, Calgary.</p>
+    <div class="hero-btns">
+      <a href="order.html" class="btn btn-red">🛒 Order Now</a>
+      <a href="menu.html" class="btn btn-outline">📋 View Menu</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stats-inner">
+      <div class="stat"><span class="num">100%</span><span class="lbl">Authentic</span></div>
+      <div class="stat"><span class="num">30+</span><span class="lbl">Dishes</span></div>
+      <div class="stat"><span class="num">4.9★</span><span class="lbl">Rating</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div> Scroll to explore</div>
+  <div class="hero-fade"></div>
+</section>
+<div class="flag-stripe"></div>
+
+<!-- ── FEATURED DISHES ── -->
+<section style="background:var(--bg2);">
+  <div class="eyebrow reveal">✦ Must-Try Dishes</div>
+  <h2 class="sh reveal">Our <em>Signature Plates</em></h2>
+  <p class="section-sub reveal">Traditional recipes passed down through generations — bold in spice, rich in culture, and made fresh every day.</p>
+  <div class="dishes-grid">
+
+    <div class="dish-card reveal">
+      <div class="dish-img">
+        <img src="images/hero-bg.jpg" alt="Doro Wat" loading="lazy">
+        <div class="dish-img-overlay"></div>
+        <div class="badge-wrap"><span class="badge bp">Signature</span></div>
+      </div>
+      <div class="dish-body">
+        <div class="dish-name">Doro Wat</div>
+        <div class="dish-desc">Ethiopia's national dish — chicken slow-braised in rich berbere sauce with hard-boiled eggs, served on fresh injera.</div>
+        <div class="dish-foot"><span class="dish-price">$18</span><button class="add-btn" onclick="flash(this)">+ Add to Cart</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card reveal">
+      <div class="dish-img">
+        <img src="images/tibs.jpg" alt="Beef Tibs" loading="lazy">
+        <div class="dish-img-overlay"></div>
+        <div class="badge-wrap"><span class="badge bp">Popular</span><span class="badge bs">Spicy</span></div>
+      </div>
+      <div class="dish-body">
+        <div class="dish-name">Beef Tibs</div>
+        <div class="dish-desc">Tender beef cubes sautéed with onions, tomatoes, jalapeño, mitmita and rosemary. Full of bold, smoky flavour.</div>
+        <div class="dish-foot"><span class="dish-price">$19</span><button class="add-btn" onclick="flash(this)">+ Add to Cart</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card reveal">
+      <div class="dish-img">
+        <img src="images/misir-wat.jpg" alt="Misir Wat" loading="lazy">
+        <div class="dish-img-overlay"></div>
+        <div class="badge-wrap"><span class="badge bv">Vegan</span><span class="badge bp">Popular</span></div>
+      </div>
+      <div class="dish-body">
+        <div class="dish-name">Misir Wat</div>
+        <div class="dish-desc">Red split lentils simmered low and slow in berbere sauce with onion and garlic. Deeply comforting and flavourful.</div>
+        <div class="dish-foot"><span class="dish-price">$14</span><button class="add-btn" onclick="flash(this)">+ Add to Cart</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card reveal">
+      <div class="dish-img">
+        <img src="images/veggie-combo.jpg" alt="Vegetarian Combo" loading="lazy">
+        <div class="dish-img-overlay"></div>
+        <div class="badge-wrap"><span class="badge bv">Vegan</span><span class="badge bc">Chef's Pick</span></div>
+      </div>
+      <div class="dish-body">
+        <div class="dish-name">Vegetarian Combo</div>
+        <div class="dish-desc">A beautiful spread of misir, gomen, atakilt and shiro on fresh injera. The perfect way to discover Ethiopian cuisine.</div>
+        <div class="dish-foot"><span class="dish-price">$16</span><button class="add-btn" onclick="flash(this)">+ Add to Cart</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card reveal">
+      <div class="dish-img">
+        <img src="images/kitfo.jpg" alt="Kitfo" loading="lazy">
+        <div class="dish-img-overlay"></div>
+        <div class="badge-wrap"><span class="badge bp">Signature</span></div>
+      </div>
+      <div class="dish-body">
+        <div class="dish-name">Kitfo</div>
+        <div class="dish-desc">Minced lean beef marinated in mitmita spice and niter kibbeh. A celebrated Eritrean and Ethiopian delicacy.</div>
+        <div class="dish-foot"><span class="dish-price">$20</span><button class="add-btn" onclick="flash(this)">+ Add to Cart</button></div>
+      </div>
+    </div>
+
+    <div class="dish-card reveal">
+      <div class="dish-img">
+        <img src="images/shiro.jpg" alt="Shiro Wat" loading="lazy">
+        <div class="dish-img-overlay"></div>
+        <div class="badge-wrap"><span class="badge bv">Vegan</span></div>
+      </div>
+      <div class="dish-body">
+        <div class="dish-name">Shiro Wat</div>
+        <div class="dish-desc">Silky chickpea flour stew cooked with berbere and spiced butter — a beloved Eritrean everyday comfort dish.</div>
+        <div class="dish-foot"><span class="dish-price">$13</span><button class="add-btn" onclick="flash(this)">+ Add to Cart</button></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="view-all reveal"><a href="menu.html" class="btn btn-outline">View Full Menu →</a></div>
+</section>
+
+<!-- ── WHY CHOOSE US ── -->
+<section style="background:var(--bg);">
+  <div class="eyebrow reveal">✦ Our Promise</div>
+  <h2 class="sh reveal">Why Calgary <em>Loves Us</em></h2>
+  <p class="section-sub reveal">Authentic food, genuine hospitality, and culture on every plate — every single day on Stephen Avenue.</p>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon">🌿</div>
+      <h3>100% Authentic Recipes</h3>
+      <p>Traditional Eritrean and Ethiopian family recipes prepared the same way they have been for generations — no shortcuts, ever.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">🍞</div>
+      <h3>Freshly Made Injera</h3>
+      <p>Our injera is fermented and prepared fresh in-house every morning using authentic teff flour — the real foundation of every plate.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">🚀</div>
+      <h3>Downtown Calgary Delivery</h3>
+      <p>We deliver hot food across Calgary Downtown and surrounding neighbourhoods. Authentic East African cuisine at your door.</p>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">🫀</div>
+      <h3>Vegan & Vegetarian Friendly</h3>
+      <p>Over half our menu is fully plant-based. Ethiopian cuisine is naturally rich in vibrant, spiced vegan dishes for every taste.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section style="background:var(--bg2);">
+  <div class="eyebrow reveal">✦ Guest Reviews</div>
+  <h2 class="sh reveal">What Our <em>Guests Say</em></h2>
+  <p class="section-sub reveal">Calgarians and visitors who discovered the magic of East African cuisine at our Stephen Avenue table.</p>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="quote-icon">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="test-text">The Doro Wat is absolutely stunning — deeply spiced, fall-off-the-bone tender. I've never tasted anything like it in Calgary. This is the real deal and I tell everyone about it.</p>
+      <div class="reviewer"><div class="rev-av">MK</div><div><div class="rev-name">Michael K.</div><div class="rev-title">Calgary Food Blogger</div></div></div>
+    </div>
+    <div class="test-card reveal">
+      <div class="quote-icon">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="test-text">As an Ethiopian, this is the closest to home I've tasted in all of Canada. The injera is perfect and the shiro reminds me of my grandmother's kitchen. I'm so grateful this place exists.</p>
+      <div class="reviewer"><div class="rev-av">SA</div><div><div class="rev-name">Sara A.</div><div class="rev-title">Regular Customer</div></div></div>
+    </div>
+    <div class="test-card reveal">
+      <div class="quote-icon">"</div>
+      <div class="stars">★★★★★</div>
+      <p class="test-text">Brought 8 friends who had never tried Ethiopian food. Everyone was completely blown away. The vegetarian combo platter is a masterpiece — order it immediately.</p>
+      <div class="reviewer"><div class="rev-av">JT</div><div><div class="rev-name">James T.</div><div class="rev-title">Verified Diner · Google</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">🍲</div>
+        <div class="logo-text">
+          <span class="logo-main">Eritrean & Ethiopian</span>
+          <span class="logo-sub">Cuisine · Calgary</span>
+        </div>
+      </a>
+      <p>Authentic East African cuisine served with pride at 208 Stephen Avenue SW, in the heart of Calgary Downtown. Taste the culture, feel the warmth.</p>
+      <div class="socials"><a href="#">f</a><a href="#">ig</a><a href="#">tw</a><a href="#">yt</a></div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order Now</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <ul>
+        <li><a href="#">Mon – Fri: 11am – 9pm</a></li>
+        <li><a href="#">Saturday: 10am – 10pm</a></li>
+        <li><a href="#">Sunday: 11am – 8pm</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="fci"><span class="ico">📍</span><span>208 Stephen Avenue SW<br>Calgary, AB T2P 1J5</span></div>
+      <div class="fci"><span class="ico">📞</span><span><a href="tel:+18253658347">+1 (825) 365-8347</a></span></div>
+      <div class="fci"><span class="ico">✉️</span><span><a href="mailto:abrahamtekle29@gmail.com">abrahamtekle29@gmail.com</a></span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Eritrean & Ethiopian Cuisine Calgary. All rights reserved.</span>
+    <span>208 Stephen Avenue SW, Calgary, AB T2P 1J5</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+  const obs = new IntersectionObserver((e) => e.forEach((el, i) => { if (el.isIntersecting) setTimeout(() => el.target.classList.add('in'), i * 80); }), { threshold: .1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  function flash(btn) {
+    btn.textContent = '✓ Added'; btn.style.background = '#2a5424'; btn.style.borderColor = '#2a5424'; btn.style.color = '#6abf5e';
+    setTimeout(() => { btn.textContent = '+ Add to Cart'; btn.style.cssText = ''; }, 1600);
+  }
+</script>
+</body>
+</html>

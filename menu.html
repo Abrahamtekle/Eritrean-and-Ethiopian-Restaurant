@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/style.css">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Eritrean & Ethiopian Cuisine</title>
+
+</head>
+<body>
+<nav class="nav" id="nav">
+  <a href="index.html" class="logo"><div class="logo-mark">🍲</div><div class="logo-text"><span class="logo-main">Eritrean & Ethiopian</span><span class="logo-sub">Cuisine · Calgary</span></div></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="menu.html" class="active">Menu</a></li><li><a href="order.html" class="nav-cta">Order Now</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+</nav>
+<div class="flag-stripe"></div>
+
+<div class="page-hero">
+  <div class="eyebrow">🇪🇷 🇪🇹 Authentic Recipes</div>
+  <h1>Our <em>Full Menu</em></h1>
+  <p>Traditional Eritrean & Ethiopian dishes — made fresh daily with authentic spices in Calgary Downtown.</p>
+</div>
+
+<section style="background:var(--bg);">
+  <!-- FILTER TABS -->
+  <div class="filter-bar">
+    <button class="ftab active" onclick="filter('all',this)">🍽️ All</button>
+    <button class="ftab" onclick="filter('meat',this)">🍖 Meat Dishes</button>
+    <button class="ftab" onclick="filter('veg',this)">🌿 Vegetarian</button>
+    <button class="ftab" onclick="filter('eritrean',this)">🇪🇷 Eritrean</button>
+    <button class="ftab" onclick="filter('drinks',this)">☕ Drinks</button>
+  </div>
+
+  <!-- MEAT DISHES -->
+  <div class="menu-cat" data-cat="meat">
+    <div class="cat-header"><span class="cat-icon">🍖</span><h2 class="cat-title">Meat <span>Dishes</span></h2><span class="item-count">7 items</span></div>
+    <div class="menu-grid">
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/hero-bg.jpg" loading="lazy" alt="Doro Wat">
+          <div class="badge-wrap"><span class="badge bp">Signature</span></div></div>
+        <div class="mi-body"><div class="mi-name">Doro Wat</div><div class="mi-amh">ዶሮ ወጥ</div>
+          <div class="mi-desc">Ethiopia's national dish. Chicken slow-cooked in rich berbere sauce with hard-boiled eggs. Served on injera.</div>
+          <div class="mi-foot"><span class="mi-price">$18</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/tibs.jpg" loading="lazy" alt="Tibs">
+          <div class="badge-wrap"><span class="badge bp">Popular</span><span class="badge bs">Spicy</span></div></div>
+        <div class="mi-body"><div class="mi-name">Beef Tibs</div><div class="mi-amh">ጥብስ</div>
+          <div class="mi-desc">Tender beef cubes sautéed with onions, tomatoes, jalapeño, mitmita & rosemary. Served with injera.</div>
+          <div class="mi-foot"><span class="mi-price">$19</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/kitfo.jpg" loading="lazy" alt="Kitfo">
+          <div class="badge-wrap"><span class="badge bp">Signature</span></div></div>
+        <div class="mi-body"><div class="mi-name">Kitfo</div><div class="mi-amh">ክትፎ</div>
+          <div class="mi-desc">Minced lean beef marinated in mitmita spice and niter kibbeh (spiced butter). Served raw, medium or well-done.</div>
+          <div class="mi-foot"><span class="mi-price">$20</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/lamb-tibs.jpg" loading="lazy" alt="Lamb Tibs">
+          <div class="badge-wrap"><span class="badge bn">Chef's Pick</span></div></div>
+        <div class="mi-body"><div class="mi-name">Lamb Tibs</div><div class="mi-amh">የበግ ጥብስ</div>
+          <div class="mi-desc">Tender lamb pieces stir-fried with caramelized onions, green peppers & seasoned with traditional spices.</div>
+          <div class="mi-foot"><span class="mi-price">$22</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/meat-combo.jpg" loading="lazy" alt="Beef Combo">
+          <div class="badge-wrap"><span class="badge bp">Popular</span></div></div>
+        <div class="mi-body"><div class="mi-name">Meat Combo Plate</div><div class="mi-amh">የስጋ ጣቃ</div>
+          <div class="mi-desc">A generous sharing platter of Doro Wat, Beef Tibs and Kitfo on a large injera. Perfect for 2–3 people.</div>
+          <div class="mi-foot"><span class="mi-price">$38</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/fish.jpg" loading="lazy" alt="Fish">
+          <div class="badge-wrap"><span class="badge bn">New</span></div></div>
+        <div class="mi-body"><div class="mi-name">Asa Wat (Fish Stew)</div><div class="mi-amh">ዓሳ ወጥ</div>
+          <div class="mi-desc">White fish fillet slow-cooked in turmeric, ginger, garlic & tomato sauce. Light, flavourful, and nourishing.</div>
+          <div class="mi-foot"><span class="mi-price">$17</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/firfir.jpg" loading="lazy" alt="Chicken Firfir">
+          </div>
+        <div class="mi-body"><div class="mi-name">Doro Firfir</div><div class="mi-amh">ዶሮ ፍርፍር</div>
+          <div class="mi-desc">Shredded injera mixed with chicken and berbere sauce — a beloved breakfast and lunch dish.</div>
+          <div class="mi-foot"><span class="mi-price">$16</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VEGETARIAN -->
+  <div class="menu-cat" data-cat="veg">
+    <div class="cat-header"><span class="cat-icon">🌿</span><h2 class="cat-title">Vegetarian <span>& Vegan</span></h2><span class="item-count">6 items</span></div>
+    <div class="menu-grid">
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/misir-wat.jpg" loading="lazy" alt="Misir Wat">
+          <div class="badge-wrap"><span class="badge bv">Vegan</span><span class="badge bp">Popular</span></div></div>
+        <div class="mi-body"><div class="mi-name">Misir Wat</div><div class="mi-amh">ምስር ወጥ</div>
+          <div class="mi-desc">Red lentils slow-cooked in berbere sauce with onion and garlic. Rich, hearty, and deeply spiced.</div>
+          <div class="mi-foot"><span class="mi-price">$14</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/shiro.jpg" loading="lazy" alt="Shiro">
+          <div class="badge-wrap"><span class="badge bv">Vegan</span></div></div>
+        <div class="mi-body"><div class="mi-name">Shiro Wat</div><div class="mi-amh">ሽሮ ወጥ</div>
+          <div class="mi-desc">Silky ground chickpea stew seasoned with berbere, onion and spiced butter. An Eritrean staple.</div>
+          <div class="mi-foot"><span class="mi-price">$13</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/veggie-combo.jpg" loading="lazy" alt="Veggie Combo">
+          <div class="badge-wrap"><span class="badge bv">Vegan</span><span class="badge bn">Best Seller</span></div></div>
+        <div class="mi-body"><div class="mi-name">Vegetarian Combo</div><div class="mi-amh">የፆም ፍርፍር</div>
+          <div class="mi-desc">Misir, Shiro, Gomen (collard greens), Atakilt (cabbage & carrots) and Tikil Gomen on fresh injera.</div>
+          <div class="mi-foot"><span class="mi-price">$16</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/gomen.jpg" loading="lazy" alt="Gomen">
+          <div class="badge-wrap"><span class="badge bv">Vegan</span></div></div>
+        <div class="mi-body"><div class="mi-name">Gomen (Collard Greens)</div><div class="mi-amh">ጎመን</div>
+          <div class="mi-desc">Ethiopian-style collard greens sautéed with garlic, ginger and caramelized onions. Simple and nourishing.</div>
+          <div class="mi-foot"><span class="mi-price">$12</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/beyainatu.jpg" loading="lazy" alt="Beyainatu">
+          <div class="badge-wrap"><span class="badge bv">Vegan</span><span class="badge bp">Popular</span></div></div>
+        <div class="mi-body"><div class="mi-name">Beyainatu (Fasting Platter)</div><div class="mi-amh">በያይነቱ</div>
+          <div class="mi-desc">A grand platter of 5+ vegan dishes on injera — the ultimate way to experience Ethiopian fasting cuisine.</div>
+          <div class="mi-foot"><span class="mi-price">$20</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/azifa.jpg" loading="lazy" alt="Azifa">
+          <div class="badge-wrap"><span class="badge bv">Vegan</span><span class="badge bn">New</span></div></div>
+        <div class="mi-body"><div class="mi-name">Azifa (Green Lentil Salad)</div><div class="mi-amh">አዚፋ</div>
+          <div class="mi-desc">Whole green lentils dressed with lemon, mustard, jalapeño, and onion. Refreshing and zesty.</div>
+          <div class="mi-foot"><span class="mi-price">$11</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ERITREAN SPECIALS -->
+  <div class="menu-cat" data-cat="eritrean">
+    <div class="cat-header"><span class="cat-icon">🇪🇷</span><h2 class="cat-title">Eritrean <span>Specials</span></h2><span class="item-count">4 items</span></div>
+    <div class="menu-grid">
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/kitfo.jpg" loading="lazy" alt="Zigni">
+          <div class="badge-wrap"><span class="badge bp">Signature</span><span class="badge bs">Spicy</span></div></div>
+        <div class="mi-body"><div class="mi-name">Zigni (Spicy Beef Stew)</div><div class="mi-amh">ዝግኒ</div>
+          <div class="mi-desc">Eritrea's beloved spicy beef stew simmered in berbere with onions and tomatoes. Served with injera or rice.</div>
+          <div class="mi-foot"><span class="mi-price">$19</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/lamb-tibs.jpg" loading="lazy" alt="Tsebhi">
+          <div class="badge-wrap"><span class="badge bn">Chef's Pick</span></div></div>
+        <div class="mi-body"><div class="mi-name">Tsebhi Birsen (Lentil Stew)</div><div class="mi-amh">ጸብሒ ብርሰን</div>
+          <div class="mi-desc">Eritrean-style red lentil stew seasoned with tesmi (spiced butter) and fresh herbs. Comforting and aromatic.</div>
+          <div class="mi-foot"><span class="mi-price">$14</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/tibs.jpg" loading="lazy" alt="Ful">
+          <div class="badge-wrap"><span class="badge bv">Vegan</span></div></div>
+        <div class="mi-body"><div class="mi-name">Ful (Fava Bean Stew)</div><div class="mi-amh">ፉል</div>
+          <div class="mi-desc">Slow-cooked fava beans mashed with lemon, garlic, cumin & olive oil. A beloved Eritrean breakfast.</div>
+          <div class="mi-foot"><span class="mi-price">$12</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/misir-wat.jpg" loading="lazy" alt="Hamli">
+          <div class="badge-wrap"><span class="badge bv">Vegan</span><span class="badge bn">New</span></div></div>
+        <div class="mi-body"><div class="mi-name">Hamli (Greens & Lentils)</div><div class="mi-amh">ሓምሊ</div>
+          <div class="mi-desc">Eritrean sautéed greens with lentils, garlic, tomato and spiced oil. Light, healthy and full of flavour.</div>
+          <div class="mi-foot"><span class="mi-price">$13</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DRINKS -->
+  <div class="menu-cat" data-cat="drinks">
+    <div class="cat-header"><span class="cat-icon">☕</span><h2 class="cat-title">Drinks <span>& Beverages</span></h2><span class="item-count">4 items</span></div>
+    <div class="menu-grid">
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/coffee.jpg" loading="lazy" alt="Ethiopian Coffee">
+          <div class="badge-wrap"><span class="badge bp">Must Try</span></div></div>
+        <div class="mi-body"><div class="mi-name">Ethiopian Coffee Ceremony</div><div class="mi-amh">ቡና</div>
+          <div class="mi-desc">Traditional 3-round coffee ceremony with freshly roasted & ground beans. Served with incense and popcorn.</div>
+          <div class="mi-foot"><span class="mi-price">$10</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/tej.jpg" loading="lazy" alt="Tej">
+          <div class="badge-wrap"><span class="badge bn">Traditional</span></div></div>
+        <div class="mi-body"><div class="mi-name">Tej (Ethiopian Honey Wine)</div><div class="mi-amh">ጠጅ</div>
+          <div class="mi-desc">Traditional Ethiopian honey mead, lightly fermented and subtly sweet. Served in the traditional berele glass.</div>
+          <div class="mi-foot"><span class="mi-price">$9</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/spris.jpg" loading="lazy" alt="Juice">
+          <div class="badge-wrap"><span class="badge bv">Vegan</span></div></div>
+        <div class="mi-body"><div class="mi-name">Spris (Layered Juice)</div><div class="mi-amh">ስፕሪስ</div>
+          <div class="mi-desc">Beautiful layered Ethiopian fruit juice — avocado, mango, and papaya. Creamy, fresh, and stunning.</div>
+          <div class="mi-foot"><span class="mi-price">$7</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+      <div class="mi reveal">
+        <div class="mi-img"><img src="images/shai.jpg" loading="lazy" alt="Tea">
+          <div class="badge-wrap"><span class="badge bv">Vegan</span></div></div>
+        <div class="mi-body"><div class="mi-name">Shai (Spiced Tea)</div><div class="mi-amh">ሻሂ</div>
+          <div class="mi-desc">Eritrean-style black tea brewed with cardamom, cloves and cinnamon. Warming and fragrant.</div>
+          <div class="mi-foot"><span class="mi-price">$4</span><button class="cart-btn" onclick="addCart(this)">+ Add</button></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<a href="order.html" class="cart-float" id="cartFloat">🛒 Go to Order <span class="cart-count" id="cartCount">0</span></a>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-mark">🍲</div><div class="logo-text"><span class="logo-main">Eritrean & Ethiopian</span><span class="logo-sub">Cuisine · Calgary</span></div></a><p>Authentic East African cuisine in the heart of Calgary Downtown.</p><div class="socials"><a href="#">f</a><a href="#">ig</a><a href="#">tw</a><a href="#">yt</a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="menu.html">Menu</a></li><li><a href="order.html">Order Now</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Opening Hours</h4><ul><li><a href="#">Mon–Fri: 11am – 9pm</a></li><li><a href="#">Saturday: 10am – 10pm</a></li><li><a href="#">Sunday: 11am – 8pm</a></li></ul></div>
+    <div class="footer-col"><h4>Contact Us</h4><div class="fci"><span class="ico">📍</span><span>208 Stephen Avenue SW, Calgary, AB T2P 1J5</span></div><div class="fci"><span class="ico">📞</span><span><a href="tel:+18253658347">+1 (825) 365-8347</a></span></div><div class="fci"><span class="ico">✉️</span><span><a href="mailto:abrahamtekle29@gmail.com">abrahamtekle29@gmail.com</a></span></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Eritrean & Ethiopian Cuisine Calgary. All rights reserved.</span></div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50));
+let count=0;
+function filter(cat,btn){
+  document.querySelectorAll('.ftab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  document.querySelectorAll('[data-cat]').forEach(el=>{el.classList.toggle('hidden',cat!=='all'&&el.dataset.cat!==cat);});
+}
+function addCart(btn){count++;document.getElementById('cartCount').textContent=count;document.getElementById('cartFloat').classList.add('show');btn.textContent='✓ Added';btn.classList.add('added');setTimeout(()=>{btn.textContent='+ Add';btn.classList.remove('added');},1600);}
+const obs=new IntersectionObserver(e=>e.forEach((el,i)=>{if(el.isIntersecting)setTimeout(()=>el.target.classList.add('in'),i*60);}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

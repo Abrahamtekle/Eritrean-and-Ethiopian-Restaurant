@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/style.css">
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Now — Eritrean & Ethiopian Cuisine</title>
+
+</head>
+<body>
+<nav class="nav" id="nav">
+  <a href="index.html" class="logo"><div class="logo-mark">🍲</div><div class="logo-text"><span class="logo-main">Eritrean & Ethiopian</span><span class="logo-sub">Cuisine · Calgary</span></div></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="menu.html">Menu</a></li><li><a href="order.html" class="nav-cta active">Order Now</a></li><li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+</nav>
+<div class="flag-stripe"></div>
+
+<div class="order-wrap">
+  <div style="margin-bottom:46px;">
+    <div class="eyebrow">✦ Calgary Delivery & Pickup</div>
+    <h2 class="sh">Place Your <em>Order</em></h2>
+    <p class="section-sub">Hot, authentic food delivered across Downtown Calgary in under 35 minutes.</p>
+  </div>
+  <div class="order-layout">
+    <div>
+      <div class="step-card">
+        <div class="step-head"><div class="step-num">1</div><h3>Your Details</h3></div>
+        <div class="step-body">
+          <div class="form-row">
+            <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your full name"></div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+1 (403) 000-0000"></div>
+          </div>
+          <div class="form-group"><label>Delivery Address (Calgary)</label><input type="text" placeholder="123 Main St SW, Calgary, AB"></div>
+          <div class="form-row">
+            <div class="form-group"><label>Date</label><input type="date" id="ddate"></div>
+            <div class="form-group"><label>Time</label><input type="time"></div>
+          </div>
+          <div class="form-group"><label>Special Instructions</label><input type="text" placeholder="Spice level, allergies, access codes..."></div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head"><div class="step-num">2</div><h3>Choose Your Dishes</h3></div>
+        <div class="step-body">
+          <div class="form-group" style="margin-bottom:0;">
+            <label style="margin-bottom:12px;display:block;">Select items (check all that apply)</label>
+            <div class="food-checks">
+              <div class="fcheck"><input type="checkbox" id="i1" value="18" onchange="updateSum()"><label for="i1">Doro Wat</label><span class="fp">$18</span></div>
+              <div class="fcheck"><input type="checkbox" id="i2" value="19" onchange="updateSum()"><label for="i2">Beef Tibs</label><span class="fp">$19</span></div>
+              <div class="fcheck"><input type="checkbox" id="i3" value="20" onchange="updateSum()"><label for="i3">Kitfo</label><span class="fp">$20</span></div>
+              <div class="fcheck"><input type="checkbox" id="i4" value="22" onchange="updateSum()"><label for="i4">Lamb Tibs</label><span class="fp">$22</span></div>
+              <div class="fcheck"><input type="checkbox" id="i5" value="14" onchange="updateSum()"><label for="i5">Misir Wat</label><span class="fp">$14</span></div>
+              <div class="fcheck"><input type="checkbox" id="i6" value="13" onchange="updateSum()"><label for="i6">Shiro Wat</label><span class="fp">$13</span></div>
+              <div class="fcheck"><input type="checkbox" id="i7" value="16" onchange="updateSum()"><label for="i7">Vegetarian Combo</label><span class="fp">$16</span></div>
+              <div class="fcheck"><input type="checkbox" id="i8" value="20" onchange="updateSum()"><label for="i8">Beyainatu Platter</label><span class="fp">$20</span></div>
+              <div class="fcheck"><input type="checkbox" id="i9" value="19" onchange="updateSum()"><label for="i9">Zigni (Eritrean)</label><span class="fp">$19</span></div>
+              <div class="fcheck"><input type="checkbox" id="i10" value="10" onchange="updateSum()"><label for="i10">Coffee Ceremony</label><span class="fp">$10</span></div>
+            </div>
+          </div>
+          <div class="form-group" style="margin-top:18px;">
+            <label>Spice Level</label>
+            <select><option>Mild</option><option selected>Medium</option><option>Hot (Traditional)</option><option>Extra Hot</option></select>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-head"><div class="step-num">3</div><h3>Payment</h3></div>
+        <div class="step-body">
+          <div class="pay-opts">
+            <label class="pay-opt sel" id="codOpt"><input type="radio" name="pay" value="cod" checked onchange="toggleCard(false)"> 💵 Cash on Delivery</label>
+            <label class="pay-opt" id="cardOpt"><input type="radio" name="pay" value="card" onchange="toggleCard(true)"> 💳 Pay by Card</label>
+          </div>
+          <div class="card-fields" id="cardFields">
+            <div class="form-group"><label>Card Number</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19"></div>
+            <div class="form-row">
+              <div class="form-group"><label>Expiry</label><input type="text" placeholder="MM / YY" maxlength="7"></div>
+              <div class="form-group"><label>CVV</label><input type="text" placeholder="•••" maxlength="3"></div>
+            </div>
+            <div class="form-group"><label>Name on Card</label><input type="text" placeholder="Your name"></div>
+          </div>
+          <button class="submit-btn" onclick="placeOrder()">🍽️ Confirm Order</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-panel">
+      <div class="sum-card">
+        <div class="sum-head"><h3>🛒 Order Summary</h3></div>
+        <div class="sum-items" id="sumItems"><div class="sum-empty">No items yet.<br>Choose your dishes above!</div></div>
+        <div class="sum-totals">
+          <div class="trow"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+          <div class="trow"><span>Delivery (Calgary)</span><span>$4.99</span></div>
+          <div class="trow"><span>GST (5%)</span><span id="tax">$0.00</span></div>
+          <div class="trow grand"><span>Total</span><span id="grand">$4.99</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <h4>📦 Delivery Info</h4>
+        <div class="irow">🚀 <span>Est. delivery: <strong style="color:var(--cream)">30–40 min</strong></span></div>
+        <div class="irow">📍 <span>Downtown Calgary area</span></div>
+        <div class="irow">📞 <span><a href="tel:+18253658347" style="color:var(--muted)">+1 (825) 365-8347</a></span></div>
+        <div class="irow">🔒 <span>Secure checkout · SSL encrypted</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-ic">🎉</div>
+    <h2>Order Confirmed!</h2>
+    <p>Your food is being prepared! We'll call you at your number with an ETA. Injera is being rolled fresh right now.</p>
+    <button class="modal-close" onclick="document.getElementById('modal').classList.remove('show');window.location.href='index.html';">Back to Home</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-mark">🍲</div><div class="logo-text"><span class="logo-main">Eritrean & Ethiopian</span><span class="logo-sub">Cuisine · Calgary</span></div></a><p>Authentic East African cuisine in the heart of Calgary Downtown.</p><div class="socials"><a href="#">f</a><a href="#">ig</a><a href="#">tw</a><a href="#">yt</a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="menu.html">Menu</a></li><li><a href="order.html">Order Now</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Opening Hours</h4><ul><li><a href="#">Mon–Fri: 11am – 9pm</a></li><li><a href="#">Saturday: 10am – 10pm</a></li><li><a href="#">Sunday: 11am – 8pm</a></li></ul></div>
+    <div class="footer-col"><h4>Contact Us</h4><div class="fci"><span class="ico">📍</span><span>208 Stephen Avenue SW, Calgary, AB T2P 1J5</span></div><div class="fci"><span class="ico">📞</span><span><a href="tel:+18253658347">+1 (825) 365-8347</a></span></div><div class="fci"><span class="ico">✉️</span><span><a href="mailto:abrahamtekle29@gmail.com">abrahamtekle29@gmail.com</a></span></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Eritrean & Ethiopian Cuisine Calgary. All rights reserved.</span></div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50));
+const items={i1:{n:'Doro Wat',p:18},i2:{n:'Beef Tibs',p:19},i3:{n:'Kitfo',p:20},i4:{n:'Lamb Tibs',p:22},i5:{n:'Misir Wat',p:14},i6:{n:'Shiro Wat',p:13},i7:{n:'Vegetarian Combo',p:16},i8:{n:'Beyainatu Platter',p:20},i9:{n:'Zigni',p:19},i10:{n:'Coffee Ceremony',p:10}};
+function updateSum(){
+  let html='',sub=0;
+  Object.entries(items).forEach(([id,item])=>{const cb=document.getElementById(id);if(cb&&cb.checked){sub+=item.p;html+=`<div class="sum-item"><span class="sname">${item.n}</span><span class="sprice">$${item.p}</span></div>`;}});
+  document.getElementById('sumItems').innerHTML=html||'<div class="sum-empty">No items selected yet.</div>';
+  const t=sub*.05,g=sub+4.99+t;
+  document.getElementById('subtotal').textContent='$'+sub.toFixed(2);
+  document.getElementById('tax').textContent='$'+t.toFixed(2);
+  document.getElementById('grand').textContent='$'+g.toFixed(2);
+}
+function toggleCard(show){document.getElementById('cardFields').classList.toggle('show',show);document.getElementById('codOpt').classList.toggle('sel',!show);document.getElementById('cardOpt').classList.toggle('sel',show);}
+function placeOrder(){document.getElementById('modal').classList.add('show');}
+document.getElementById('ddate').value=new Date().toISOString().split('T')[0];
+</script>
+</body>
+</html>
